@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://currencyconverterhub.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/guide/how-currency-conversion-works</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/guide/understanding-exchange-rates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/privacy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/terms</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://currencyconverterhub.github.io/#/disclaimer</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/guide/how-currency-conversion-works</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/guide/understanding-exchange-rates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/articles</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/best-time-to-exchange-currency</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/currency-conversion-fees-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/usd-to-pkr-rate-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/fixed-vs-floating-exchange-rates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/how-to-read-currency-pairs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/privacy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/terms</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://currencyconverthub.github.io/#/disclaimer</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

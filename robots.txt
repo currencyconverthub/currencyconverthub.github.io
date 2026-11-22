@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://currencyconverterhub.github.io/sitemap.xml
+Sitemap: https://currencyconverthub.github.io/sitemap.xml
