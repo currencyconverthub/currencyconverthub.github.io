@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>CurrencyConverterHub — Free Live Currency Converter</title>
+    <meta name="description" content="Convert 160+ world currencies with live mid-market exchange rates. Free, fast and accurate — USD, EUR, GBP, PKR, INR and more, updated daily with no sign-up." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CurrencyConverterHub" />
+    <meta property="og:title" content="CurrencyConverterHub — Free Live Currency Converter" />
+    <meta property="og:description" content="Convert 160+ world currencies with live mid-market exchange rates. Free, fast and accurate — USD, EUR, GBP, PKR, INR and more, updated daily with no sign-up." />
+    <meta property="og:url" content="https://currencyconverterhub.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CurrencyConverterHub — Free Live Currency Converter" />
+    <meta name="twitter:description" content="Convert 160+ world currencies with live mid-market exchange rates. Free, fast and accurate, no sign-up." />
+    <link rel="canonical" href="https://currencyconverterhub.github.io/" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "CurrencyConverterHub",
+          "url": "https://currencyconverterhub.github.io/"
+        },
+        {
+          "@type": "WebApplication",
+          "name": "CurrencyConverterHub Currency Converter",
+          "url": "https://currencyconverterhub.github.io/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Free online currency converter using live mid-market exchange rates for more than 160 world currencies."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "How accurate are the exchange rates on CurrencyConverterHub?", "acceptedAnswer": { "@type": "Answer", "text": "The converter uses live mid-market rates — the midpoint between buy and sell prices on the global currency markets — fetched from public exchange-rate data providers. These are the same reference rates quoted by news outlets and financial sites. The rate you actually receive from a bank or money transfer service will usually be slightly lower, because providers add a margin and sometimes a fee." } },
+            { "@type": "Question", "name": "How often are the rates updated?", "acceptedAnswer": { "@type": "Answer", "text": "The underlying rate data is refreshed once a day by our primary provider, and the converter shows the exact date and time of the last update beneath every result. Currency markets move continuously on weekdays, so for very large conversions it is worth checking the rate again shortly before you send money." } },
+            { "@type": "Question", "name": "Why is the rate at my bank different from the rate shown here?", "acceptedAnswer": { "@type": "Answer", "text": "Banks and exchange bureaus rarely give you the mid-market rate. They quote a retail rate that includes their profit margin — often 1% to 4% away from the mid-market rate — and may add a fixed fee on top. Comparing the retail quote against the mid-market rate shown here tells you exactly how much the conversion is costing you." } },
+            { "@type": "Question", "name": "What is the mid-market rate?", "acceptedAnswer": { "@type": "Answer", "text": "The mid-market rate is the midpoint between the price buyers are willing to pay for a currency and the price sellers are asking, at a given moment on the global market. It is considered the fairest reference rate because it contains no markup from any single bank or broker." } },
+            { "@type": "Question", "name": "Can I convert money directly on this website?", "acceptedAnswer": { "@type": "Answer", "text": "No. CurrencyConverterHub is a calculator and information tool only. It does not hold accounts, process payments or move money between currencies. To actually exchange or send money you will need a bank, a licensed money transfer service or a currency exchange provider." } },
+            { "@type": "Question", "name": "Which currencies does the converter support?", "acceptedAnswer": { "@type": "Answer", "text": "The converter supports more than 160 currencies, from major ones such as the US dollar, euro, British pound, Japanese yen and Swiss franc to smaller currencies including the Pakistani rupee, Bangladeshi taka, Nigerian naira and Kenyan shilling. Use the search box inside the From and To menus to find any currency by its code or full name." } },
+            { "@type": "Question", "name": "How do I convert an amount from one currency to another?", "acceptedAnswer": { "@type": "Answer", "text": "Type the amount, choose the currency you have in the From menu and the currency you want in the To menu. The result updates instantly. Use the swap button between the two menus to reverse the direction, or tap one of the popular pairs under the converter to load a common combination in one click." } },
+            { "@type": "Question", "name": "Do exchange rates change on weekends?", "acceptedAnswer": { "@type": "Answer", "text": "Global currency markets close from Friday evening to Monday morning in most regions, so rates barely move over the weekend. The rate shown on a Saturday or Sunday is normally the last rate from Friday's close, and it can jump when trading resumes on Monday." } },
+            { "@type": "Question", "name": "What is the difference between the buy rate and the sell rate?", "acceptedAnswer": { "@type": "Answer", "text": "The buy rate is what a provider pays you when it buys a currency from you; the sell rate is what it charges when it sells that currency to you. The gap between the two — the spread — is part of how the provider earns money. The mid-market rate sits exactly halfway between them." } },
+            { "@type": "Question", "name": "Is CurrencyConverterHub free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely. There is no account, no sign-up and no limit on the number of conversions. The rates come from free public data sources, and the tool runs entirely in your browser." } }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4f6f4;
+        --surface: #ffffff;
+        --surface-2: #eef2ee;
+        --ink: #16211b;
+        --muted: #5a6a60;
+        --line: #d9e0d9;
+        --accent: #0b6b4a;
+        --accent-strong: #084f37;
+        --accent-soft: #e2f1e9;
+        --gold: #b8860b;
+        --error-bg: #fbeae8;
+        --error-ink: #8c2b21;
+        --shadow: 0 10px 30px rgba(16, 42, 30, 0.08);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0e1511;
+          --surface: #17211a;
+          --surface-2: #1e2b21;
+          --ink: #e8f0ea;
+          --muted: #9db3a5;
+          --line: #2c3d31;
+          --accent: #3ecf96;
+          --accent-strong: #6fe3b1;
+          --accent-soft: #173528;
+          --gold: #e0aa3e;
+          --error-bg: #3a1d1a;
+          --error-ink: #f2a49c;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
+      a { color: var(--accent); }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+      /* Header */
+      header.site {
+        position: sticky; top: 0; z-index: 40;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+      .header-in { display: flex; align-items: center; gap: 18px; min-height: 60px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+      .brand { font-weight: 800; font-size: 1.12rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 9px; }
+      .brand .mark {
+        width: 30px; height: 30px; border-radius: 8px; flex: none;
+        background: var(--accent); color: #fff;
+        display: inline-flex; align-items: center; justify-content: center;
+        font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 0.95rem;
+      }
+      @media (prefers-color-scheme: dark) { .brand .mark { color: #08130d; } }
+      .brand em { font-style: normal; color: var(--accent); }
+      nav.main { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+      nav.main a {
+        color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.92rem;
+        padding: 8px 11px; border-radius: 8px; display: inline-flex; align-items: center; min-height: 36px;
+      }
+      nav.main a:hover { color: var(--ink); background: var(--surface-2); }
+      nav.main a.active { color: var(--accent-strong); background: var(--accent-soft); }
+
+      main { padding: 34px 0 10px; }
+      .page { display: none; }
+      .page.on { display: block; }
+
+      /* Hero */
+      .hero { max-width: 720px; }
+      .hero h1 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(1.9rem, 4.6vw, 2.9rem); line-height: 1.12; margin: 6px 0 12px; font-weight: 700; letter-spacing: -0.01em;
+      }
+      .hero p { color: var(--muted); font-size: 1.05rem; margin: 0 0 26px; max-width: 620px; }
+
+      /* Converter */
+      .converter {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+        box-shadow: var(--shadow); padding: 26px; margin-bottom: 18px;
+      }
+      .conv-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: end; }
+      .field label { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+      .amount-row { margin-bottom: 18px; }
+      .amount-input {
+        width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 1.5rem; font-weight: 600;
+        padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px;
+        background: var(--surface); color: var(--ink);
+      }
+      .amount-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+      .swap-btn {
+        width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--line);
+        background: var(--surface-2); color: var(--accent-strong); cursor: pointer;
+        display: inline-flex; align-items: center; justify-content: center; margin-bottom: 2px;
+        transition: transform 0.25s ease, background 0.15s ease;
+      }
+      .swap-btn:hover { background: var(--accent-soft); }
+      .swap-btn.flipped { transform: rotate(180deg); }
+      .swap-btn svg { width: 20px; height: 20px; }
+
+      /* Currency picker */
+      .picker { position: relative; }
+      .picker-btn {
+        width: 100%; display: flex; align-items: center; gap: 10px; text-align: left;
+        padding: 10px 13px; border: 1.5px solid var(--line); border-radius: 10px;
+        background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; min-height: 52px;
+      }
+      .picker-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .picker-btn .code { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.12rem; }
+      .picker-btn .cname { color: var(--muted); font-size: 0.88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .picker-btn .chev { margin-left: auto; color: var(--muted); flex: none; }
+      .picker-panel {
+        position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 60;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        box-shadow: var(--shadow); overflow: hidden;
+      }
+      .picker-search {
+        width: 100%; border: none; border-bottom: 1px solid var(--line); padding: 12px 14px;
+        font: inherit; background: var(--surface); color: var(--ink);
+      }
+      .picker-search:focus { outline: none; background: var(--surface-2); }
+      .picker-list { list-style: none; margin: 0; padding: 6px; max-height: 264px; overflow-y: auto; }
+      .picker-list li {
+        display: flex; align-items: baseline; gap: 10px; padding: 9px 10px; border-radius: 8px; cursor: pointer; min-height: 40px;
+      }
+      .picker-list li:hover, .picker-list li.hl { background: var(--accent-soft); }
+      .picker-list .code { font-family: "IBM Plex Mono", monospace; font-weight: 600; width: 46px; flex: none; }
+      .picker-list .sym { color: var(--gold); font-weight: 600; width: 26px; flex: none; }
+      .picker-list .nm { color: var(--muted); font-size: 0.9rem; }
+      .picker-list .none { color: var(--muted); cursor: default; }
+      .picker-list .none:hover { background: none; }
+
+      /* Result */
+      .result-box { margin-top: 22px; border-top: 1px dashed var(--line); padding-top: 20px; }
+      .result-main { font-family: "IBM Plex Mono", monospace; font-size: clamp(1.45rem, 4vw, 2.1rem); font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+      .result-main .to-sym { color: var(--accent); }
+      .result-lines { margin-top: 8px; color: var(--muted); font-size: 0.95rem; display: grid; gap: 2px; }
+      .result-lines .mono { font-family: "IBM Plex Mono", monospace; color: var(--ink); }
+      .status-line { margin-top: 12px; font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+      .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+      .dot.loading { background: var(--gold); }
+      .dot.error { background: #c0392b; }
+      .error-box {
+        margin-top: 16px; background: var(--error-bg); color: var(--error-ink);
+        border-radius: 10px; padding: 13px 15px; font-size: 0.94rem; display: none;
+      }
+      .error-box.on { display: block; }
+      .error-box button {
+        margin-left: 8px; font: inherit; font-weight: 700; color: inherit; background: transparent;
+        border: 1.5px solid currentColor; border-radius: 7px; padding: 2px 12px; cursor: pointer; min-height: 32px;
+      }
+
+      /* Quick pairs */
+      .quick { margin: 4px 0 34px; }
+      .quick h2 { font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chip {
+        font: inherit; font-weight: 600; font-size: 0.92rem; cursor: pointer;
+        border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+        border-radius: 999px; padding: 8px 16px; min-height: 38px;
+        display: inline-flex; align-items: center; gap: 7px;
+      }
+      .chip:hover { border-color: var(--accent); color: var(--accent-strong); }
+      .chip .arr { color: var(--accent); }
+
+      /* Sections */
+      section.block { margin: 40px 0; }
+      section.block > h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.55rem; margin: 0 0 6px; }
+      section.block > p.sub { color: var(--muted); margin: 0 0 18px; max-width: 640px; }
+
+      /* Rates table */
+      .table-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+      table.rates { width: 100%; border-collapse: collapse; }
+      table.rates th, table.rates td { padding: 12px 16px; text-align: left; }
+      table.rates thead th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); border-bottom: 1px solid var(--line); }
+      table.rates tbody tr { border-bottom: 1px solid var(--line); cursor: pointer; }
+      table.rates tbody tr:last-child { border-bottom: none; }
+      table.rates tbody tr:hover { background: var(--accent-soft); }
+      table.rates td.num, table.rates th.num { text-align: right; font-family: "IBM Plex Mono", monospace; }
+      table.rates .cc { font-family: "IBM Plex Mono", monospace; font-weight: 600; }
+      table.rates .cn { color: var(--muted); font-size: 0.9rem; }
+      .table-note { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+
+      /* Guide cards */
+      .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px;
+        text-decoration: none; color: var(--ink); display: block;
+      }
+      .card:hover { border-color: var(--accent); }
+      .card .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+      .card h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.25rem; margin: 0 0 8px; line-height: 1.3; }
+      .card p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+      .card .read { margin-top: 14px; font-weight: 700; color: var(--accent); font-size: 0.92rem; }
+
+      /* Article / prose pages */
+      .prose { max-width: 760px; }
+      .prose h1 { font-family: "Source Serif 4", Georgia, serif; font-size: clamp(1.8rem, 4.4vw, 2.6rem); line-height: 1.15; margin: 4px 0 14px; }
+      .prose h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.4rem; margin: 30px 0 10px; }
+      .prose p { margin: 0 0 15px; color: var(--ink); }
+      .prose p.lede { font-size: 1.1rem; color: var(--muted); }
+      .prose ul { margin: 0 0 15px; padding-left: 22px; }
+      .prose li { margin-bottom: 7px; }
+      .prose .callout { background: var(--accent-soft); border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+      .prose .callout p { margin: 0; }
+      .prose .example { font-family: "IBM Plex Mono", monospace; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 16px 0; font-size: 0.95rem; overflow-x: auto; }
+      .back-link { display: inline-flex; align-items: center; min-height: 36px; font-weight: 600; text-decoration: none; margin-bottom: 8px; }
+
+      /* FAQ */
+      details.faq { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; }
+      details.faq summary { cursor: pointer; font-weight: 700; padding: 15px 18px; list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+      details.faq summary::-webkit-details-marker { display: none; }
+      details.faq summary .plus { color: var(--accent); font-size: 1.25rem; font-weight: 600; flex: none; transition: transform 0.2s ease; }
+      details.faq[open ] summary .plus { transform: rotate(45deg); }
+      details.faq .a { padding: 0 18px 16px; color: var(--muted); }
+      details.faq .a p { margin: 0; }
+
+      /* Footer */
+      footer.site { border-top: 1px solid var(--line); margin-top: 56px; background: var(--surface); }
+      .footer-in { padding: 30px 0 34px; display: grid; gap: 18px; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+      .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; min-height: 32px; }
+      .footer-links a:hover { color: var(--accent-strong); }
+      .footer-meta { color: var(--muted); font-size: 0.88rem; display: grid; gap: 4px; }
+      .footer-meta .fine { font-size: 0.8rem; }
+
+      @media (max-width: 640px) {
+        .conv-grid { grid-template-columns: 1fr; }
+        .swap-btn { margin: 0 auto; transform: rotate(90deg); }
+        .swap-btn.flipped { transform: rotate(270deg); }
+        .cards { grid-template-columns: 1fr; }
+        .converter { padding: 20px 16px; }
+        nav.main { margin-left: 0; }
+        table.rates th, table.rates td { padding: 11px 12px; }
+        table.rates .cn { display: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .swap-btn, details.faq summary .plus { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="#/"><span class="mark">$€</span>Currency<em>Converter</em>Hub</a>
+        <nav class="main" aria-label="Main">
+          <a href="#/" data-nav="home">Converter</a>
+          <a href="#/guide/how-currency-conversion-works" data-nav="guide1">Guides</a>
+          <a href="#/faq" data-nav="faq">FAQ</a>
+          <a href="#/about" data-nav="about">About</a>
+          <a href="#/contact" data-nav="contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+
+      <!-- ============ HOME ============ -->
+      <section class="page" id="page-home">
+        <div class="hero">
+          <h1>Convert currencies at the live mid-market rate</h1>
+          <p>Free conversions for 160+ world currencies, powered by live exchange-rate data. No sign-up, no hidden margins in the rate we show — just the number the market is actually trading at.</p>
+        </div>
+
+        <div class="converter" id="converter">
+          <div class="amount-row field">
+            <label for="amount">Amount</label>
+            <input class="amount-input" id="amount" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="100" aria-label="Amount to convert" />
+          </div>
+          <div class="conv-grid">
+            <div class="field">
+              <label id="fromLabel">From</label>
+              <div class="picker" id="fromPicker"></div>
+            </div>
+            <button class="swap-btn" id="swapBtn" type="button" aria-label="Swap currencies" title="Swap currencies">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13"/><path d="M13 3l4 4-4 4"/><path d="M20 17H7"/><path d="M11 13l-4 4 4 4"/></svg>
+            </button>
+            <div class="field">
+              <label id="toLabel">To</label>
+              <div class="picker" id="toPicker"></div>
+            </div>
+          </div>
+
+          <div class="result-box" aria-live="polite">
+            <div class="result-main" id="resultMain">Loading live rates…</div>
+            <div class="result-lines">
+              <div id="rateLine"></div>
+              <div id="inverseLine"></div>
+            </div>
+            <div class="status-line">
+              <span class="dot loading" id="statusDot"></span>
+              <span id="statusText">Fetching the latest exchange rates…</span>
+            </div>
+            <div class="error-box" id="errorBox" role="alert">
+              <span id="errorText">We could not load live exchange rates. Check your internet connection and try again — we never display estimated or made-up rates.</span>
+              <button type="button" id="retryBtn">Retry</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick">
+          <h2>Popular pairs</h2>
+          <div class="chips" id="quickChips"></div>
+        </div>
+
+        <section class="block">
+          <h2>Major currencies against the US dollar</h2>
+          <p class="sub">Live mid-market rates for the world's most traded currencies. Select any row to load that pair into the converter.</p>
+          <div class="table-card">
+            <table class="rates">
+              <thead>
+                <tr><th scope="col">Currency</th><th scope="col" class="num">1 USD =</th><th scope="col" class="num">1 unit = USD</th></tr>
+              </thead>
+              <tbody id="ratesBody">
+                <tr><td colspan="3" style="color:var(--muted)">Loading live rates…</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note" id="tableNote">Rates are mid-market reference rates for information only. The rate offered by your bank or transfer provider will differ.</p>
+        </section>
+
+        <section class="block">
+          <h2>Learn how conversion really works</h2>
+          <p class="sub">Two short, plain-English guides written for this site — what an exchange rate actually is, and why the rate you are quoted is rarely the rate you see here.</p>
+          <div class="cards">
+            <a class="card" href="#/guide/how-currency-conversion-works">
+              <div class="kicker">Guide</div>
+              <h3>How Currency Conversion Works</h3>
+              <p>From the moment you type an amount to the moment money changes hands: base rates, cross rates, spreads and fees, explained step by step.</p>
+              <div class="read">Read the guide →</div>
+            </a>
+            <a class="card" href="#/guide/understanding-exchange-rates">
+              <div class="kicker">Guide</div>
+              <h3>Understanding Exchange Rates: Mid-Market, Buy and Sell Rates</h3>
+              <p>Why there are always at least three prices for the same currency, which one matters to you, and how to spot a bad deal before you pay.</p>
+              <div class="read">Read the guide →</div>
+            </a>
+          </div>
+        </section>
+      </section>
+
+      <!-- ============ GUIDE 1 ============ -->
+      <article class="page prose" id="page-guide1">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>How Currency Conversion Works</h1>
+        <p class="lede">Every currency conversion — whether you are changing holiday money, paying an overseas invoice or sending funds to family abroad — follows the same basic mechanics. Understanding them takes five minutes and can save you real money for the rest of your life.</p>
+
+        <h2>It starts with an exchange rate</h2>
+        <p>An exchange rate is simply a price: how much of one currency you must give up to receive one unit of another. When you read that 1 US dollar equals 0.92 euros, the dollar is the base currency and the euro is the quote currency. Converting is then plain arithmetic — multiply your amount by the rate.</p>
+        <div class="example">250 USD × 0.92 = 230 EUR</div>
+        <p>That is the whole calculation. Everything else in the world of currency conversion — the fees, the margins, the different prices at different providers — is about <em>which</em> rate gets used in that multiplication, and what gets taken off the top before the money reaches you.</p>
+
+        <h2>Where exchange rates come from</h2>
+        <p>Currencies trade on the global foreign exchange market, the largest financial market in the world, where banks, governments, funds and large companies buy and sell currencies around the clock. The price moves constantly in response to interest rates, inflation, trade figures, political events and plain supply and demand. There is no single official price set by a committee; there is a market price that emerges from millions of trades.</p>
+        <p>The rate shown on CurrencyConverterHub is the <strong>mid-market rate</strong>: the midpoint between the highest price buyers are offering and the lowest price sellers are accepting at that moment. It is the cleanest reference point available, because no single provider's profit margin is baked into it.</p>
+
+        <h2>Cross rates: converting between two non-dollar currencies</h2>
+        <p>Most published rates are quoted against the US dollar, because the dollar sits on one side of the majority of the world's currency trades. To convert between two other currencies — say, British pounds to Pakistani rupees — the market works through the dollar in two steps: pounds to dollars, then dollars to rupees. This is called a cross rate, and it is exactly what our converter does behind the scenes:</p>
+        <div class="example">GBP → PKR rate = (USD per GBP) × (PKR per USD)</div>
+        <p>The result is mathematically identical to trading the pair directly, and it means a converter with dollar-based data can still price any pair of currencies accurately.</p>
+
+        <h2>Why the amount you receive is less than the calculator says</h2>
+        <p>If the mid-market calculation says your 250 dollars should become 230 euros, a bank might hand you 224. Three things eat the difference:</p>
+        <ul>
+          <li><strong>The spread.</strong> Providers buy currency at one price and sell it at a slightly worse one. The gap between their buy and sell prices is profit, and it is charged invisibly inside the rate itself.</li>
+          <li><strong>Fixed fees.</strong> Many providers add a visible charge per transfer — a few dollars for an online service, considerably more for an international wire at a traditional bank.</li>
+          <li><strong>Correspondent charges.</strong> International bank transfers pass through intermediary banks, and each one may deduct a fee before the money arrives.</li>
+        </ul>
+        <p>None of this is necessarily unfair — moving money across borders costs money to do safely. The problem is only that the biggest cost, the spread, is usually hidden. Comparing any quote against the mid-market rate on this page makes it visible in seconds.</p>
+
+        <h2>Fixed, floating and pegged currencies</h2>
+        <p>Most major currencies float freely: their price is set entirely by the market. Some governments instead peg their currency to another — the Hong Kong dollar tracks the US dollar within a tight band, for example — and a few fix the rate by law. Pegged currencies move in step with their anchor, which is why their rates against the dollar barely change from day to day while their rates against everything else move exactly as the anchor does.</p>
+
+        <h2>A practical routine for converting money</h2>
+        <ul>
+          <li>Check the mid-market rate here first, so you know the fair value of your money.</li>
+          <li>Get quotes from two or three providers and compare the final amount you would receive — not the fee alone, and not the rate alone.</li>
+          <li>Watch out for "zero commission" offers; the cost is almost always inside the rate instead.</li>
+          <li>For large amounts, remember rates move. A 1% swing on a house deposit is serious money, so convert close to the day you need the funds.</li>
+        </ul>
+        <div class="callout"><p><strong>The one-sentence version:</strong> conversion is just multiplication — your amount times an exchange rate — and the only real question is how far the rate you are offered sits from the mid-market rate shown on this site.</p></div>
+        <p>Next, read <a href="#/guide/understanding-exchange-rates">Understanding Exchange Rates: Mid-Market, Buy and Sell Rates</a> for a closer look at the three prices every currency has.</p>
+      </article>
+
+      <!-- ============ GUIDE 2 ============ -->
+      <article class="page prose" id="page-guide2">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>Understanding Exchange Rates: Mid-Market, Buy and Sell Rates</h1>
+        <p class="lede">Ask three different providers what a euro costs and you will get three different answers — all of them honest, all of them different. That is because a currency never has one price. It has at least three, and knowing which is which is the key to never overpaying for an exchange again.</p>
+
+        <h2>The buy rate and the sell rate</h2>
+        <p>Every currency dealer quotes two prices at the same time. The <strong>buy rate</strong> (also called the bid) is the price at which the dealer will buy a currency from you. The <strong>sell rate</strong> (the ask or offer) is the price at which the dealer will sell that currency to you. The sell rate is always less favourable to you than the buy rate — the dealer sells dear and buys cheap, exactly like any other merchant.</p>
+        <p>Suppose a bureau quotes the euro at 0.90 to buy and 0.96 to sell, per US dollar's worth of trade. Hand over 100 euros and you receive about 90 dollars. Immediately buy those euros back and you would need about 96 dollars. Nothing about the market moved; the six-dollar difference is the dealer's margin, called the <strong>spread</strong>.</p>
+
+        <h2>The mid-market rate sits exactly in between</h2>
+        <p>Take the average of the buy and sell prices and you get the <strong>mid-market rate</strong> — 0.93 in the example above. This is the rate quoted by news services, search engines and reference converters like this one. No customer actually trades at the mid-market rate; it exists as a neutral benchmark, the "true" market price before any individual provider adds its costs.</p>
+        <div class="callout"><p>Think of the mid-market rate as the wholesale price of currency, and the buy and sell rates as retail prices. The further a retail quote sits from wholesale, the more the exchange is costing you.</p></div>
+
+        <h2>How wide is a normal spread?</h2>
+        <p>It depends heavily on where you exchange and what you exchange:</p>
+        <ul>
+          <li><strong>Major pairs, online specialists</strong> (USD/EUR, GBP/USD): often well under 1% from mid-market.</li>
+          <li><strong>Traditional banks:</strong> commonly 1% to 3%, sometimes more for less common currencies.</li>
+          <li><strong>Airport and hotel bureaus:</strong> frequently 5% to 10% or worse — the most expensive place to change money.</li>
+          <li><strong>Less traded currencies:</strong> wider spreads everywhere, because dealers hold them less and price in more risk.</li>
+        </ul>
+        <p>On a small holiday exchange, a 3% spread costs a few dollars. On a 20,000-dollar transfer, it costs 600 — which is why the spread matters far more than any advertised fee.</p>
+
+        <h2>"No commission" does not mean free</h2>
+        <p>A bureau can truthfully advertise zero commission while quoting a sell rate 8% away from mid-market. The commission has not disappeared; it has moved into the rate, where most customers never think to look. The only reliable test of any offer is to compare the final amount you receive against the mid-market calculation for the same amount, on the same day.</p>
+
+        <h2>Which rate should you use for planning?</h2>
+        <p>Use the mid-market rate — the one this site shows — as your reference for budgeting, invoicing and comparing quotes. Then expect the amount you actually receive to be a little lower, and treat anything within about 1% of mid-market on a major currency pair as a fair retail deal. If a quote is 4% or more away, shop around: on any significant sum, a few minutes of comparison is the best-paid work you will do that day.</p>
+        <p>For the full picture of how a conversion flows from rate to received amount, see <a href="#/guide/how-currency-conversion-works">How Currency Conversion Works</a>.</p>
+      </article>
+
+      <!-- ============ FAQ ============ -->
+      <section class="page" id="page-faq">
+        <div class="prose">
+          <a class="back-link" href="#/">← Back to the converter</a>
+          <h1>Frequently Asked Questions</h1>
+          <p class="lede">Straight answers about how this converter works, where its rates come from, and why the number here rarely matches the number at your bank.</p>
+        </div>
+        <div id="faqList" style="max-width:760px"></div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <article class="page prose" id="page-about">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>About CurrencyConverterHub</h1>
+        <p class="lede">CurrencyConverterHub is a free, independent currency conversion tool built around one principle: show the real market rate, plainly, with nothing hidden inside it.</p>
+        <p>Most people meet currency conversion at the worst possible moments — at an airport desk, in a bank branch, at the checkout of a foreign online store — and most providers take advantage of that by burying their profit inside the exchange rate itself. A rate can look official and still be 3%, 5% or even 10% worse than the market price, and almost nobody checks.</p>
+        <p>This site exists to make checking effortless. The converter covers more than 160 currencies using live mid-market rates from public exchange-rate data providers, shows you exactly when the data was last updated, and pairs the tool with plain-English guides that explain what buy rates, sell rates and spreads actually mean for your money.</p>
+        <h2>What this site is — and is not</h2>
+        <p>CurrencyConverterHub is a calculator and an educational resource. It is not a bank, a broker or a money transfer service: we do not hold accounts, take deposits, or move money, and no conversion you calculate here changes hands. When you are ready to exchange or send money, compare a few licensed providers against the mid-market rate you found here — that comparison is the entire point of the site.</p>
+        <h2>How the rates are produced</h2>
+        <p>When you open the converter, your browser fetches the latest published rates directly from our data providers and does all calculations locally on your device. Nothing you type — no amount, no currency pair — is sent to or stored by us. If live data cannot be loaded, the converter tells you so rather than falling back to old or invented numbers.</p>
+        <p>Questions, corrections or suggestions are welcome at <a href="mailto:contact@currencyconverterhub.github.io">contact@currencyconverterhub.github.io</a>.</p>
+      </article>
+
+      <!-- ============ CONTACT ============ -->
+      <article class="page prose" id="page-contact">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>Contact Us</h1>
+        <p class="lede">The fastest way to reach the CurrencyConverterHub team is by email.</p>
+        <div class="callout"><p><strong>Email:</strong> <a href="mailto:contact@currencyconverterhub.github.io">contact@currencyconverterhub.github.io</a></p></div>
+        <p>We read every message and aim to reply within two working days. Messages that help us most include:</p>
+        <ul>
+          <li><strong>Rate problems</strong> — tell us the currency pair, the amount, and what looked wrong, plus the date and time you saw it.</li>
+          <li><strong>Currency requests</strong> — if a currency you need is missing, name it and we will check whether our data providers carry it.</li>
+          <li><strong>Corrections</strong> — if any guide or FAQ answer seems inaccurate, point us to the passage and we will review it promptly.</li>
+          <li><strong>General feedback</strong> — feature ideas and usability notes shape what we build next.</li>
+        </ul>
+        <p>Please note that we cannot help with individual transfers, bank disputes or recovering money sent through a third-party provider — for those, contact the provider or your bank directly. CurrencyConverterHub does not process conversions or hold customer funds.</p>
+      </article>
+
+      <!-- ============ PRIVACY ============ -->
+      <article class="page prose" id="page-privacy">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>Privacy Policy</h1>
+        <p class="lede">Last updated: 2026. This policy explains what information CurrencyConverterHub does and does not collect when you use this website.</p>
+        <h2>The short version</h2>
+        <p>The converter runs entirely in your browser. We have no accounts, no sign-up, and no server that receives the amounts or currency pairs you enter. We do not sell personal data, because we do not collect it.</p>
+        <h2>What happens when you use the converter</h2>
+        <p>To display live exchange rates, your browser connects directly to third-party exchange-rate data providers (currently ExchangeRate-API's public endpoint and the Frankfurter API). Those requests are necessary for the tool to work and are governed by the providers' own privacy policies. Your conversion amounts are calculated locally on your device and are never transmitted to us or to the rate providers.</p>
+        <h2>Cookies and storage</h2>
+        <p>This website does not set advertising or tracking cookies and does not use local storage to build a profile of you. If that ever changes, this policy will be updated before the change takes effect.</p>
+        <h2>Analytics</h2>
+        <p>We may use privacy-respecting, aggregate analytics to understand which pages are visited and whether the site is working correctly. Aggregate analytics tell us, for example, that the FAQ page was viewed a hundred times — never who viewed it or what they converted.</p>
+        <h2>Email</h2>
+        <p>If you write to us at contact@currencyconverterhub.github.io, we receive your email address and the contents of your message, and we use them only to reply to you. We do not add correspondents to marketing lists.</p>
+        <h2>Third-party links</h2>
+        <p>Pages on this site may link to external websites, including our data providers. We are not responsible for the privacy practices of those sites, and we encourage you to read their policies.</p>
+        <h2>Changes to this policy</h2>
+        <p>If we change this policy in a material way, the revised version will be posted on this page with a new "last updated" date. Continued use of the site after a change constitutes acceptance of the revised policy.</p>
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent to <a href="mailto:contact@currencyconverterhub.github.io">contact@currencyconverterhub.github.io</a>.</p>
+      </article>
+
+      <!-- ============ TERMS ============ -->
+      <article class="page prose" id="page-terms">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>Terms of Use</h1>
+        <p class="lede">Last updated: 2026. By using CurrencyConverterHub you accept these terms. If you do not agree with them, please do not use the site.</p>
+        <h2>The service</h2>
+        <p>CurrencyConverterHub provides a free currency conversion calculator, reference exchange-rate tables and educational articles. The service is provided for personal, informational use.</p>
+        <h2>Not financial advice</h2>
+        <p>Nothing on this site is financial, investment, tax or legal advice. Exchange rates shown here are mid-market reference rates for information only; they are not an offer to buy or sell currency, and the rate you receive from any bank or provider will differ. Always verify the final terms of any transaction with the provider carrying it out, and consider consulting a qualified professional for significant financial decisions.</p>
+        <h2>Accuracy and availability</h2>
+        <p>We work to keep rates current and the site available, but we do not warrant that the data is error-free, complete or uninterrupted. Rate data is supplied by third-party providers and may be delayed or, occasionally, unavailable; when live data cannot be loaded, the converter says so rather than displaying stale figures. We may change, suspend or discontinue any part of the site without notice.</p>
+        <h2>Acceptable use</h2>
+        <p>You agree not to misuse the site: do not attempt to disrupt its operation, scrape it at a volume that degrades service for others, misrepresent its content as your own, or use it for any unlawful purpose.</p>
+        <h2>Intellectual property</h2>
+        <p>The text, design and code of this site belong to CurrencyConverterHub unless otherwise stated, and may not be reproduced commercially without permission. Exchange-rate data remains the property of its respective providers.</p>
+        <h2>Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, CurrencyConverterHub is not liable for any loss arising from reliance on rates or information shown on this site, or from any transaction you enter into with a third-party provider.</p>
+        <h2>Changes to these terms</h2>
+        <p>We may revise these terms from time to time; the version posted here at the time of your visit applies. Questions about these terms can be sent to <a href="mailto:contact@currencyconverterhub.github.io">contact@currencyconverterhub.github.io</a>.</p>
+      </article>
+
+      <!-- ============ DISCLAIMER ============ -->
+      <article class="page prose" id="page-disclaimer">
+        <a class="back-link" href="#/">← Back to the converter</a>
+        <h1>Disclaimer</h1>
+        <p class="lede">Please read this disclaimer carefully before relying on any rate or figure shown on CurrencyConverterHub.</p>
+        <h2>Reference rates only</h2>
+        <p>All exchange rates on this site are mid-market reference rates drawn from third-party public data providers. They are the same style of rate quoted by news organisations as a market benchmark, but they are <strong>not</strong> rates at which you can buy or sell currency. Every bank, broker and transfer service applies its own margin and fees, so the amount you actually receive will be less than the amount calculated here.</p>
+        <h2>No guarantee of accuracy</h2>
+        <p>Currency markets move continuously and data feeds can be delayed, interrupted or contain errors. While we display the provider's own last-updated timestamp with every result, we cannot guarantee that any figure is complete, current or free from error at the moment you view it. Do not enter into a transaction based solely on a rate shown here; confirm the live, final rate with your provider first.</p>
+        <h2>Not a financial service</h2>
+        <p>CurrencyConverterHub is not a bank, currency dealer, money transmitter or financial adviser, and it is not authorised or regulated as one. The site performs calculations and publishes educational content only. It does not execute exchanges, hold funds, or recommend any provider, product or course of action.</p>
+        <h2>External services</h2>
+        <p>Any mention of third-party providers, including the APIs that supply our rate data, is for factual reference only and does not constitute endorsement. Your dealings with any third party are solely between you and that party.</p>
+        <p>If you spot a figure on this site that you believe is wrong, please tell us at <a href="mailto:contact@currencyconverterhub.github.io">contact@currencyconverterhub.github.io</a> and we will investigate.</p>
+      </article>
+
+    </main>
+
+    <footer class="site">
+      <div class="wrap footer-in">
+        <div class="footer-links">
+          <a href="#/">Converter</a>
+          <a href="#/guide/how-currency-conversion-works">How Conversion Works</a>
+          <a href="#/guide/understanding-exchange-rates">Exchange Rates Explained</a>
+          <a href="#/faq">FAQ</a>
+          <a href="#/about">About</a>
+          <a href="#/contact">Contact</a>
+          <a href="#/privacy">Privacy Policy</a>
+          <a href="#/terms">Terms of Use</a>
+          <a href="#/disclaimer">Disclaimer</a>
+        </div>
+        <div class="footer-meta">
+          <div>© 2026 CurrencyConverterHub</div>
+          <div class="fine">Rates are mid-market reference rates for information only and may differ from the rate your bank or provider offers. CurrencyConverterHub does not exchange or transfer money.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      "use strict";
+
+      /* ---------- Currency catalogue: code -> [name, symbol] ---------- */
+      var CURRENCIES = {
+        USD:["US Dollar","$"], EUR:["Euro","€"], GBP:["British Pound","£"], JPY:["Japanese Yen","¥"], CHF:["Swiss Franc","CHF"], CAD:["Canadian Dollar","$"], AUD:["Australian Dollar","$"], CNY:["Chinese Yuan","¥"], INR:["Indian Rupee","₹"], PKR:["Pakistani Rupee","₨"], AED:["UAE Dirham","د.إ"], SAR:["Saudi Riyal","﷼"], BDT:["Bangladeshi Taka","৳"], NGN:["Nigerian Naira","₦"], KES:["Kenyan Shilling","KSh"], ZAR:["South African Rand","R"], BRL:["Brazilian Real","R$"], MXN:["Mexican Peso","$"], SGD:["Singapore Dollar","$"], HKD:["Hong Kong Dollar","$"], NZD:["New Zealand Dollar","$"], KRW:["South Korean Won","₩"], TRY:["Turkish Lira","₺"], RUB:["Russian Ruble","₽"], PLN:["Polish Zloty","zł"], SEK:["Swedish Krona","kr"], NOK:["Norwegian Krone","kr"], DKK:["Danish Krone","kr"], THB:["Thai Baht","฿"], MYR:["Malaysian Ringgit","RM"], IDR:["Indonesian Rupiah","Rp"], PHP:["Philippine Peso","₱"], VND:["Vietnamese Dong","₫"], EGP:["Egyptian Pound","£"], IQD:["Iraqi Dinar","د.ع"], IRR:["Iranian Rial","﷼"], QAR:["Qatari Riyal","﷼"], KWD:["Kuwaiti Dinar","د.ك"], OMR:["Omani Rial","﷼"], JOD:["Jordanian Dinar","د.ا"], LBP:["Lebanese Pound","£"], ILS:["Israeli Shekel","₪"], UAH:["Ukrainian Hryvnia","₴"], CZK:["Czech Koruna","Kč"], HUF:["Hungarian Forint","Ft"], ISK:["Icelandic Krona","kr"], HRK:["Croatian Kuna","kn"], RON:["Romanian Leu","lei"], BGN:["Bulgarian Lev","лв"], RSD:["Serbian Dinar","Дин."], AFN:["Afghan Afghani","؋"], LKR:["Sri Lankan Rupee","₨"], NPR:["Nepalese Rupee","₨"], MMK:["Burmese Kyat","K"], KHR:["Cambodian Riel","៛"], LAK:["Laotian Kip","₭"], MNT:["Mongolian Tugrik","₮"], KZT:["Kazakhstani Tenge","₸"], UZS:["Uzbekistan Som","so'm"], TMT:["Turkmenistani Manat","m"], TJS:["Tajikistani Somoni","ЅМ"], KGS:["Kyrgystani Som","лв"], AZN:["Azerbaijani Manat","₼"], GEL:["Georgian Lari","₾"], AMD:["Armenian Dram","֏"], BYN:["Belarusian Ruble","Br"], MDL:["Moldovan Leu","L"], ALL:["Albanian Lek","Lek"], MKD:["Macedonian Denar","ден"], BAM:["Bosnia-Herzegovina Mark","KM"], GHS:["Ghanaian Cedi","¢"], XOF:["West African CFA Franc","Fr"], XAF:["Central African CFA Franc","Fr"], MAD:["Moroccan Dirham","د.م."], DZD:["Algerian Dinar","د.ج"], TND:["Tunisian Dinar","د.ت"], LYD:["Libyan Dinar","ل.د"], SDG:["Sudanese Pound","£"], ETB:["Ethiopian Birr","Br"], UGX:["Ugandan Shilling","USh"], TZS:["Tanzanian Shilling","TSh"], MZN:["Mozambican Metical","MT"], AOA:["Angolan Kwanza","Kz"], ZMW:["Zambian Kwacha","ZK"], MWK:["Malawian Kwacha","MK"], MUR:["Mauritian Rupee","₨"], SCR:["Seychellois Rupee","₨"], GMD:["Gambian Dalasi","D"], GNF:["Guinean Franc","Fr"], MGA:["Malagasy Ariary","Ar"], SLL:["Sierra Leonean Leone","Le"], SLE:["Sierra Leonean Leone","Le"], LRD:["Liberian Dollar","$"], SOS:["Somali Shilling","S"], DJF:["Djiboutian Franc","Fr"], KMF:["Comorian Franc","Fr"], CVE:["Cape Verdean Escudo","$"], STN:["Sao Tomean Dobra","Db"], ERN:["Eritrean Nakfa","Nfk"], SSP:["South Sudanese Pound","£"], BIF:["Burundian Franc","Fr"], RWF:["Rwandan Franc","Fr"], NAD:["Namibian Dollar","$"], BWP:["Botswanan Pula","P"], LSL:["Lesotho Loti","L"], SZL:["Swazi Lilangeni","L"], ARS:["Argentine Peso","$"], CLP:["Chilean Peso","$"], COP:["Colombian Peso","$"], PEN:["Peruvian Sol","S/."], UYU:["Uruguayan Peso","$"], PYG:["Paraguayan Guarani","Gs"], BOB:["Bolivian Boliviano","Bs"], VES:["Venezuelan Bolivar","Bs"], GTQ:["Guatemalan Quetzal","Q"], HNL:["Honduran Lempira","L"], NIO:["Nicaraguan Cordoba","C$"], CRC:["Costa Rican Colon","₡"], PAB:["Panamanian Balboa","B/."], DOP:["Dominican Peso","RD$"], JMD:["Jamaican Dollar","J$"], TTD:["Trinidad Dollar","TT$"], BBD:["Barbadian Dollar","$"], BSD:["Bahamian Dollar","$"], BMD:["Bermudian Dollar","$"], BZD:["Belize Dollar","BZ$"], XCD:["East Caribbean Dollar","$"], AWG:["Aruban Florin","ƒ"], ANG:["Netherlands Antillean Guilder","ƒ"], SRD:["Surinamese Dollar","$"], GYD:["Guyanaese Dollar","$"], CUP:["Cuban Peso","₱"], HTG:["Haitian Gourde","G"], KYD:["Cayman Islands Dollar","$"], FJD:["Fijian Dollar","$"], PGK:["Papua New Guinean Kina","K"], SBD:["Solomon Islands Dollar","$"], TOP:["Tongan Pa'anga","T$"], VUV:["Vanuatu Vatu","Vt"], WST:["Samoan Tala","WS$"], XPF:["CFP Franc","Fr"], TWD:["New Taiwan Dollar","NT$"], MOP:["Macanese Pataca","MOP$"], BND:["Brunei Dollar","$"], BTN:["Bhutanese Ngultrum","Nu."], MVR:["Maldivian Rufiyaa","Rf"], MRU:["Mauritanian Ouguiya","UM"], CDF:["Congolese Franc","Fr"], FKP:["Falkland Islands Pound","£"], GGP:["Guernsey Pound","£"], GIP:["Gibraltar Pound","£"], IMP:["Manx Pound","£"], JEP:["Jersey Pound","£"], SHP:["Saint Helena Pound","£"], FOK:["Faroese Krona","kr"], KID:["Kiribati Dollar","$"], TVD:["Tuvaluan Dollar","$"], XDR:["Special Drawing Rights","SDR"], YER:["Yemeni Rial","﷼"], SYP:["Syrian Pound","£"]
+      };
+
+      var MAJORS = ["EUR","GBP","JPY","CHF","CAD","AUD","CNY","INR","PKR","AED"];
+      var QUICK_PAIRS = [["USD","EUR"],["USD","GBP"],["USD","PKR"],["USD","INR"],["EUR","USD"],["GBP","USD"]];
+      var POPULAR_ORDER = ["USD","EUR","GBP","JPY","CHF","CAD","AUD","NZD","CNY","INR","PKR","AED","SAR","BDT","SGD","HKD","KRW","TRY","ZAR","BRL","MXN","PLN","SEK","NOK","DKK","THB","MYR","IDR","PHP","NGN","KES","EGP"];
+
+      /* ---------- State ---------- */
+      var state = {
+        rates: null,          // USD-based rates object
+        updatedText: "",
+        sourceName: "",
+        from: "USD",
+        to: "EUR",
+        loaded: false,
+        failed: false
+      };
+
+      function $(id) { return document.getElementById(id); }
+      function curName(code) { return CURRENCIES[code] ? CURRENCIES[code][0] : code; }
+      function curSym(code) { return CURRENCIES[code] ? CURRENCIES[code][1] : code; }
+
+      function availableCodes() {
+        if (!state.rates) return Object.keys(CURRENCIES);
+        var codes = Object.keys(state.rates).filter(function (c) { return typeof state.rates[c] === "number" && state.rates[c] > 0; });
+        codes.sort(function (a, b) {
+          var ia = POPULAR_ORDER.indexOf(a), ib = POPULAR_ORDER.indexOf(b);
+          if (ia !== -1 || ib !== -1) return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+          return a < b ? -1 : 1;
+        });
+        return codes;
+      }
+
+      /* ---------- Number formatting ---------- */
+      function fmtMoney(amount, code) {
+        try {
+          return new Intl.NumberFormat("en-US", { style: "currency", currency: code, currencyDisplay: "narrowSymbol" }).format(amount);
+        } catch (e) {
+          return curSym(code) + " " + amount.toLocaleString("en-US", { maximumFractionDigits: 2 });
+        }
+      }
+      function fmtRate(r) {
+        if (!isFinite(r)) return "—";
+        if (r >= 100) return r.toLocaleString("en-US", { maximumFractionDigits: 2 });
+        if (r >= 1) return r.toLocaleString("en-US", { maximumFractionDigits: 4 });
+        return parseFloat(r.toPrecision(5)).toString();
+      }
+      function parseAmount() {
+        var raw = $("amount").value.replace(/[^0-9.]/g, "");
+        var n = parseFloat(raw);
+        return isNaN(n) ? 0 : n;
+      }
+
+      /* ---------- Picker component ---------- */
+      function buildPicker(rootId, getCode, setCode) {
+        var root = $(rootId);
+        root.innerHTML =
+          '<button type="button" class="picker-btn" aria-haspopup="listbox" aria-expanded="false">' +
+            '<span class="code"></span><span class="cname"></span>' +
+            '<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>' +
+          '</button>' +
+          '<div class="picker-panel" hidden>' +
+            '<input type="text" class="picker-search" placeholder="Search by code or name…" aria-label="Search currencies" />' +
+            '<ul class="picker-list" role="listbox"></ul>' +
+          '</div>';
+        var btn = root.querySelector(".picker-btn");
+        var panel = root.querySelector(".picker-panel");
+        var search = root.querySelector(".picker-search");
+        var list = root.querySelector(".picker-list");
+
+        function renderBtn() {
+          var code = getCode();
+          btn.querySelector(".code").textContent = code;
+          btn.querySelector(".cname").textContent = curName(code) + " · " + curSym(code);
+        }
+        function renderList(filter) {
+          var codes = availableCodes();
+          var f = (filter || "").trim().toLowerCase();
+          var shown = codes.filter(function (c) {
+            if (!f) return true;
+            return c.toLowerCase().indexOf(f) !== -1 || curName(c).toLowerCase().indexOf(f) !== -1;
+          });
+          list.innerHTML = "";
+          if (!shown.length) {
+            var li0 = document.createElement("li");
+            li0.className = "none"; li0.textContent = "No currency matches your search.";
+            list.appendChild(li0); return;
+          }
+          shown.slice(0, 300).forEach(function (c) {
+            var li = document.createElement("li");
+            li.setAttribute("role", "option");
+            li.innerHTML = '<span class="code"></span><span class="sym"></span><span class="nm"></span>';
+            li.querySelector(".code").textContent = c;
+            li.querySelector(".sym").textContent = curSym(c);
+            li.querySelector(".nm").textContent = curName(c);
+            li.addEventListener("click", function () { setCode(c); close(); convert(); });
+            list.appendChild(li);
+          });
+        }
+        function open() {
+          closeAllPickers();
+          panel.hidden = false;
+          btn.setAttribute("aria-expanded", "true");
+          renderList("");
+          search.value = "";
+          setTimeout(function () { search.focus(); }, 30);
+        }
+        function close() {
+          panel.hidden = true;
+          btn.setAttribute("aria-expanded", "false");
+        }
+        btn.addEventListener("click", function () { panel.hidden ? open() : close(); });
+        search.addEventListener("input", function () { renderList(search.value); });
+        search.addEventListener("keydown", function (e) { if (e.key === "Escape") { close(); btn.focus(); } });
+        document.addEventListener("click", function (e) { if (!root.contains(e.target)) close(); });
+        return { refresh: renderBtn, refreshList: function () { if (!panel.hidden) renderList(search.value); } };
+      }
+      var pickers = [];
+      function closeAllPickers() {
+        document.querySelectorAll(".picker-panel").forEach(function (p) { p.hidden = true; });
+        document.querySelectorAll(".picker-btn").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+      }
+
+      var fromPicker = buildPicker("fromPicker", function () { return state.from; }, function (c) { state.from = c; fromPicker.refresh(); });
+      var toPicker = buildPicker("toPicker", function () { return state.to; }, function (c) { state.to = c; toPicker.refresh(); });
+      pickers.push(fromPicker, toPicker);
+      fromPicker.refresh(); toPicker.refresh();
+
+      /* ---------- Quick pairs ---------- */
+      var chipsWrap = $("quickChips");
+      QUICK_PAIRS.forEach(function (pair) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "chip";
+        b.innerHTML = '<span></span><span class="arr">→</span><span></span>';
+        b.children[0].textContent = pair[0];
+        b.children[2].textContent = pair[1];
+        b.setAttribute("aria-label", "Convert " + curName(pair[0]) + " to " + curName(pair[1]));
+        b.addEventListener("click", function () {
+          state.from = pair[0]; state.to = pair[1];
+          fromPicker.refresh(); toPicker.refresh(); convert();
+          document.getElementById("converter").scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        chipsWrap.appendChild(b);
+      });
+
+      /* ---------- Conversion ---------- */
+      function convert() {
+        if (!state.loaded || !state.rates) return;
+        var amount = parseAmount();
+        var rf = state.rates[state.from], rt = state.rates[state.to];
+        if (!rf || !rt) {
+          $("resultMain").textContent = "That currency pair is not available from the current rate source.";
+          $("rateLine").textContent = ""; $("inverseLine").textContent = "";
+          return;
+        }
+        var rate = rt / rf;
+        var result = amount * rate;
+        $("resultMain").innerHTML = "";
+        var a = document.createElement("span"); a.textContent = fmtMoney(amount, state.from) + "  =  ";
+        var b = document.createElement("span"); b.className = "to-sym"; b.textContent = fmtMoney(result, state.to);
+        $("resultMain").appendChild(a); $("resultMain").appendChild(b);
+        $("rateLine").innerHTML = 'Exchange rate: <span class="mono">1 ' + state.from + " = " + fmtRate(rate) + " " + state.to + "</span>";
+        $("inverseLine").innerHTML = 'Inverse: <span class="mono">1 ' + state.to + " = " + fmtRate(1 / rate) + " " + state.from + "</span>";
+      }
+
+      function renderTable() {
+        var body = $("ratesBody");
+        body.innerHTML = "";
+        MAJORS.forEach(function (code) {
+          var r = state.rates[code];
+          if (!r) return;
+          var tr = document.createElement("tr");
+          tr.setAttribute("tabindex", "0");
+          tr.setAttribute("role", "button");
+          tr.setAttribute("aria-label", "Convert US Dollar to " + curName(code));
+          var td1 = document.createElement("td");
+          td1.innerHTML = '<span class="cc"></span> <span class="cn"></span>';
+          td1.querySelector(".cc").textContent = code;
+          td1.querySelector(".cn").textContent = curName(code);
+          var td2 = document.createElement("td"); td2.className = "num"; td2.textContent = fmtRate(r);
+          var td3 = document.createElement("td"); td3.className = "num"; td3.textContent = fmtRate(1 / r);
+          tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3);
+          function pick() {
+            state.from = "USD"; state.to = code;
+            fromPicker.refresh(); toPicker.refresh(); convert();
+            document.getElementById("converter").scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          tr.addEventListener("click", pick);
+          tr.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
+          body.appendChild(tr);
+        });
+        $("tableNote").textContent = "Mid-market rates, last updated " + state.updatedText + " (" + state.sourceName + "). Select any row to load that pair into the converter. The rate offered by your bank or transfer provider will differ.";
+      }
+
+      /* ---------- Loading rates ---------- */
+      function setStatus(mode, text) {
+        var dot = $("statusDot");
+        dot.className = "dot" + (mode === "loading" ? " loading" : mode === "error" ? " error" : "");
+        $("statusText").textContent = text;
+      }
+
+      function fetchJSON(url, timeoutMs) {
+        return new Promise(function (resolve, reject) {
+          var ctrl = ("AbortController" in window) ? new AbortController() : null;
+          var timer = setTimeout(function () { if (ctrl) ctrl.abort(); reject(new Error("timeout")); }, timeoutMs);
+          fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (res) {
+            clearTimeout(timer);
+            if (!res.ok) { reject(new Error("HTTP " + res.status)); return; }
+            res.json().then(resolve, reject);
+          }, function (err) { clearTimeout(timer); reject(err); });
+        });
+      }
+
+      function applyRates(rates, updatedText, sourceName) {
+        state.rates = rates;
+        state.updatedText = updatedText;
+        state.sourceName = sourceName;
+        state.loaded = true;
+        state.failed = false;
+        $("errorBox").classList.remove("on");
+        // If a selected currency is unavailable from this source, fall back sensibly.
+        if (!rates[state.from]) state.from = "USD";
+        if (!rates[state.to]) state.to = rates["EUR"] ? "EUR" : Object.keys(rates)[0];
+        fromPicker.refresh(); toPicker.refresh();
+        setStatus("ok", "Live rates loaded · Last updated " + updatedText + " · Source: " + sourceName);
+        convert();
+        renderTable();
+      }
+
+      function loadRates() {
+        state.loaded = false;
+        setStatus("loading", "Fetching the latest exchange rates…");
+        $("resultMain").textContent = "Loading live rates…";
+        $("rateLine").textContent = ""; $("inverseLine").textContent = "";
+        $("errorBox").classList.remove("on");
+
+        fetchJSON("https://open.er-api.com/v6/latest/USD", 15000).then(function (data) {
+          if (!data || data.result !== "success" || !data.rates) throw new Error("bad data");
+          var when = data.time_last_update_utc ? data.time_last_update_utc.replace(/\s*\+0000\s*$/, " UTC") : "today";
+          applyRates(data.rates, when, "ExchangeRate-API (open access)");
+        }).catch(function () {
+          // Fallback: Frankfurter (European Central Bank reference rates, ~30 currencies)
+          return fetchJSON("https://api.frankfurter.app/latest?from=USD", 15000).then(function (data) {
+            if (!data || !data.rates) throw new Error("bad data");
+            data.rates.USD = 1;
+            var when = data.date ? data.date + " (daily reference rate)" : "today";
+            applyRates(data.rates, when, "Frankfurter / European Central Bank reference rates");
+          });
+        }).catch(function () {
+          state.failed = true;
+          setStatus("error", "Live rates are unavailable right now.");
+          $("resultMain").textContent = "Rates unavailable";
+          var body = $("ratesBody");
+          body.innerHTML = "";
+          var tr = document.createElement("tr");
+          var td = document.createElement("td");
+          td.colSpan = 3; td.style.color = "var(--muted)";
+          td.textContent = "The live rate table could not be loaded. Please check your connection and try again.";
+          tr.appendChild(td); body.appendChild(tr);
+          $("errorBox").classList.add("on");
+        });
+      }
+
+      $("retryBtn").addEventListener("click", loadRates);
+      $("amount").addEventListener("input", convert);
+      $("swapBtn").addEventListener("click", function () {
+        var t = state.from; state.from = state.to; state.to = t;
+        fromPicker.refresh(); toPicker.refresh();
+        this.classList.toggle("flipped");
+        convert();
+      });
+
+      loadRates();
+
+      /* ---------- FAQ ---------- */
+      var FAQ = [
+        ["How accurate are the exchange rates on CurrencyConverterHub?", "The converter uses live mid-market rates — the midpoint between buy and sell prices on the global currency markets — fetched from public exchange-rate data providers. These are the same reference rates quoted by news outlets and financial sites. The rate you actually receive from a bank or money transfer service will usually be slightly lower, because providers add a margin and sometimes a fee."],
+        ["How often are the rates updated?", "The underlying rate data is refreshed once a day by our primary provider, and the converter shows the exact date and time of the last update beneath every result. Currency markets move continuously on weekdays, so for very large conversions it is worth checking the rate again shortly before you send money."],
+        ["Why is the rate at my bank different from the rate shown here?", "Banks and exchange bureaus rarely give you the mid-market rate. They quote a retail rate that includes their profit margin — often 1% to 4% away from the mid-market rate — and may add a fixed fee on top. Comparing the retail quote against the mid-market rate shown here tells you exactly how much the conversion is costing you."],
+        ["What is the mid-market rate?", "The mid-market rate is the midpoint between the price buyers are willing to pay for a currency and the price sellers are asking, at a given moment on the global market. It is considered the fairest reference rate because it contains no markup from any single bank or broker."],
+        ["Can I convert money directly on this website?", "No. CurrencyConverterHub is a calculator and information tool only. It does not hold accounts, process payments or move money between currencies. To actually exchange or send money you will need a bank, a licensed money transfer service or a currency exchange provider."],
+        ["Which currencies does the converter support?", "The converter supports more than 160 currencies, from major ones such as the US dollar, euro, British pound, Japanese yen and Swiss franc to smaller currencies including the Pakistani rupee, Bangladeshi taka, Nigerian naira and Kenyan shilling. Use the search box inside the From and To menus to find any currency by its code or full name."],
+        ["How do I convert an amount from one currency to another?", "Type the amount, choose the currency you have in the From menu and the currency you want in the To menu. The result updates instantly. Use the swap button between the two menus to reverse the direction, or tap one of the popular pairs under the converter to load a common combination in one click."],
+        ["Do exchange rates change on weekends?", "Global currency markets close from Friday evening to Monday morning in most regions, so rates barely move over the weekend. The rate shown on a Saturday or Sunday is normally the last rate from Friday's close, and it can jump when trading resumes on Monday."],
+        ["What is the difference between the buy rate and the sell rate?", "The buy rate is what a provider pays you when it buys a currency from you; the sell rate is what it charges when it sells that currency to you. The gap between the two — the spread — is part of how the provider earns money. The mid-market rate sits exactly halfway between them."],
+        ["Is CurrencyConverterHub free to use?", "Yes, completely. There is no account, no sign-up and no limit on the number of conversions. The rates come from free public data sources, and the tool runs entirely in your browser."]
+      ];
+      var faqList = $("faqList");
+      FAQ.forEach(function (qa) {
+        var d = document.createElement("details");
+        d.className = "faq";
+        var s = document.createElement("summary");
+        var q = document.createElement("span"); q.textContent = qa[0];
+        var plus = document.createElement("span"); plus.className = "plus"; plus.textContent = "+"; plus.setAttribute("aria-hidden", "true");
+        s.appendChild(q); s.appendChild(plus);
+        var a = document.createElement("div"); a.className = "a";
+        var p = document.createElement("p"); p.textContent = qa[1];
+        a.appendChild(p);
+        d.appendChild(s); d.appendChild(a);
+        faqList.appendChild(d);
+      });
+
+      /* ---------- Router ---------- */
+      var ROUTES = {
+        "/": ["page-home", "home", "CurrencyConverterHub — Free Live Currency Converter"],
+        "/guide/how-currency-conversion-works": ["page-guide1", "guide1", "How Currency Conversion Works — CurrencyConverterHub"],
+        "/guide/understanding-exchange-rates": ["page-guide2", "guide1", "Understanding Exchange Rates: Mid-Market, Buy and Sell Rates — CurrencyConverterHub"],
+        "/faq": ["page-faq", "faq", "FAQ — CurrencyConverterHub"],
+        "/about": ["page-about", "about", "About — CurrencyConverterHub"],
+        "/contact": ["page-contact", "contact", "Contact — CurrencyConverterHub"],
+        "/privacy": ["page-privacy", "", "Privacy Policy — CurrencyConverterHub"],
+        "/terms": ["page-terms", "", "Terms of Use — CurrencyConverterHub"],
+        "/disclaimer": ["page-disclaimer", "", "Disclaimer — CurrencyConverterHub"]
+      };
+      function route() {
+        var hash = window.location.hash.replace(/^#/, "");
+        if (!hash || hash === "/") hash = "/";
+        var r = ROUTES[hash] || ROUTES["/"];
+        document.querySelectorAll(".page").forEach(function (p) { p.classList.remove("on"); });
+        $(r[0]).classList.add("on");
+        document.querySelectorAll("nav.main a").forEach(function (a) {
+          a.classList.toggle("active", a.getAttribute("data-nav") === r[1]);
+        });
+        document.title = r[2];
+        window.scrollTo(0, 0);
+        closeAllPickers();
+      }
+      window.addEventListener("hashchange", route);
+      route();
+    })();
+    </script>
+  </body>
+</html>
